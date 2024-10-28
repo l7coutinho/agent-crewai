@@ -36,4 +36,25 @@ planning_agent = Agent(
 
 # Tasks
 
+task_event_locator = Task(
+	description="""
+		Encontrar eventos esportivos de uma determinada categoria com base nos interesses do usuário delmitado entre as tags.
+		Sua resposta final deve ser uma lista de eventos esportivos com informações relevantes, como nome, local, data e hora e uma breve descricão.
 
+		<evento>
+		- Disponibilidade: 16/12/2022 a 18/12/2022
+		- Cidade: São Paulo
+		- Evento de interesse: Futebol
+		</evento>
+	""",
+	agent=agent_event_locator
+)
+
+task_planning_agent = Task(
+	description="""
+		Criar um itinerário otimizado que maximize a eficiência de deslocamento e minimize o tempo de viagem do usuário.
+		Inclua recomendações de transportees e horários de funcionamento.
+		A resposta final deve ser um plano de viagem completo, com um cronograma diário e um itinerário otimizado.
+	""",
+	agent=planning_agent
+)
